@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _passwordController,
-                labelText: 'Password',
+                labelText: 'mot de passe',
                 icon: Icons.lock,
                 isObscure: true,
               ),
@@ -86,13 +86,13 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Don\'t have an account? ',
+                  'Tu n\'as pas encore de compte? ',
                   style: TextStyle(
                     fontSize: 20,
                   ),
                 ),
                 Text(
-                  'Register',
+                  'S\'inscrire',
                   style: TextStyle(fontSize: 20, color: buttonColor),
                 ),
               ],
