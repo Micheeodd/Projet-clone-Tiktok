@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
-import '../../widgets/text_input_field.dart';
+import 'package:tiktok_tutorial/constants.dart';
+import 'package:tiktok_tutorial/controllers/auth_controller.dart';
+import 'package:tiktok_tutorial/views/screens/auth/login_screen.dart';
+import 'package:tiktok_tutorial/views/widgets/text_input_field.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class SignupScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Tiktok Clone',
+              'Clone de TikTok',
               style: TextStyle(
                 fontSize: 35,
                 color: buttonColor,
@@ -27,29 +28,33 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
             const Text(
-              'Inscription',
+              'S\'inscrire',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
               ),
             ),
+            const SizedBox(
+              height: 25,
+            ),
             Stack(
               children: [
                 const CircleAvatar(
                   radius: 64,
-                  backgroundImage: NetworkImage('https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png'),
+                  backgroundImage: NetworkImage(
+                      'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png'),
                   backgroundColor: Colors.black,
                 ),
                 Positioned(
                   bottom: -10,
                   left: 80,
                   child: IconButton(
-                    onPressed: () {
-                      print('choisir image');
-                    },
-                    icon: const Icon(Icons.add_a_photo),
+                    onPressed: () => authController.pickImage(),
+                    icon: const Icon(
+                      Icons.add_a_photo,
+                    ),
                   ),
-                )
+                ),
               ],
             ),
             const SizedBox(
@@ -60,7 +65,7 @@ class SignupScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _usernameController,
-                labelText: 'Utilisateur',
+                labelText: 'Nom d\'utilisateur',
                 icon: Icons.person,
               ),
             ),
@@ -101,12 +106,20 @@ class SignupScreen extends StatelessWidget {
                   Radius.circular(5),
                 ),
               ),
-              child: const Center(
-                child: Text(
-                  'Inscription',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
+              child: InkWell(
+                onTap: () => authController.registerUser(
+                  _usernameController.text,
+                  _emailController.text,
+                  _passwordController.text,
+                  authController.profilePhoto,
+                ),
+                child: const Center(
+                  child: Text(
+                    'S\'inscrire',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),
@@ -118,14 +131,21 @@ class SignupScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Tu as déja un compte? ',
+                  'Vous avez déjà un compte ? ',
                   style: TextStyle(
                     fontSize: 20,
                   ),
                 ),
-                Text(
-                  'Connexion',
-                  style: TextStyle(fontSize: 20, color: buttonColor),
+                InkWell(
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => LoginScreen(),
+                    ),
+                  ),
+                  child: Text(
+                    'Connexion',
+                    style: TextStyle(fontSize: 20, color: buttonColor),
+                  ),
                 ),
               ],
             ),

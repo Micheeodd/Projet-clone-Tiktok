@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Tiktok Clone',
+              'Clone Tiktok',
               style: TextStyle(
                 fontSize: 35,
                 color: buttonColor,
@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             const Text(
-              'Login',
+              'Connexion',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _passwordController,
-                labelText: 'mot de passe',
+                labelText: 'Mot de passe',
                 icon: Icons.lock,
                 isObscure: true,
               ),
@@ -69,12 +69,18 @@ class LoginScreen extends StatelessWidget {
                   Radius.circular(5),
                 ),
               ),
-              child: const Center(
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
+              child: InkWell(
+                onTap: () => authController.loginUser(
+                  _emailController.text,
+                  _passwordController.text,
+                ),
+                child: const Center(
+                  child: Text(
+                    'Connexion',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),
@@ -86,14 +92,21 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Tu n\'as pas encore de compte? ',
+                  'Vous n\'avez pas de compte? ',
                   style: TextStyle(
                     fontSize: 20,
                   ),
                 ),
-                Text(
-                  'S\'inscrire',
-                  style: TextStyle(fontSize: 20, color: buttonColor),
+                InkWell(
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => SignupScreen(),
+                    ),
+                  ),
+                  child: Text(
+                    'Inscription',
+                    style: TextStyle(fontSize: 20, color: buttonColor),
+                  ),
                 ),
               ],
             ),

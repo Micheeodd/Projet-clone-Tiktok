@@ -15,4 +15,12 @@
     <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowBackground">?android:colorBackground</item>
     </style>
+
+    <!-- Firebase Configuration -->
+    <string name="google_app_id">1:128405637328:android:a3398f5a0584c1d49776d5</string>
+    <string name="google_api_key">AIzaSyDJU5eaYcKr-3eygbX4Pdo5PhomehtqN1k</string>
+    <string name="firebase_database_url">https://tiktok-clone-3499c.firebaseio.com</string>
+    <string name="gcm_defaultSenderId">128405637328</string>
+    <string name="google_storage_bucket">tiktok-clone-3499c.appspot.com</string>
+    <string name="project_id">tiktok-clone-3499c</string>
 </resources>
