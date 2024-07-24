@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Projet annuel Clone Tiktok" company="B3 AL ESGI" webLink="http://" view-date="2024-04-29" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3309" locale="fr_FR">
+    <description><![CDATA[Projet de clone tiktok dans le cadre de notre bachelor AL à l'esgi de Nantes]]></description>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="200" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="75" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#990099 #ffff00 #0000ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="08fc28e50b53441a85ca4357de587e8c" name="Redaction choix techno" color="#0000ff" meeting="false" start="2024-05-13" duration="1" complete="0" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" uid="d1f189704eed4c70aa3a22a6ad3093d5" name="Design UI avec figma" color="#ffff00" meeting="false" start="2024-05-14" duration="1" complete="0" expand="true">
+            <depend id="25" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="25" uid="8be7e681f7e74047bedd674684a1208f" name="Itération 1" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+            <task id="2" uid="6d783d54a2c64316b3d38b5d5ee2ba2c" name="Dev Front" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true">
+                <task id="4" uid="311ca5f0375f4925aaa840b4a8c3bc45" name="Page d'accueil" color="#990099" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true"/>
+                <task id="5" uid="8daf0d18d85e449f97c1256d901d2015" name="Profil User" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true"/>
+                <task id="6" uid="58e49ba21d8f4a0f99226d1730f0183b" name="Écrans de création de videos" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true"/>
+                <task id="19" uid="fdb8a2137d0a424281b146168c889112" name="Pages de recherche et de navigation" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true"/>
+                <task id="20" uid="8eb1ac53952446398167a0fb7107705f" name="Point avec l'equipe" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="28" uid="04696eccd0584f28a9ac47fec6e01296" name="Test et Qualité" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true">
+                <task id="29" uid="cb31ffbe678847c7bd6109f5987a8e25" name="Tests unitaires et d'intégration" meeting="false" start="2024-05-15" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="26" uid="c79e511191de45b9853a8f7426676a15" name="Itération 2" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true">
+            <depend id="27" type="2" difference="0" hardness="Strong"/>
+            <task id="7" uid="d8ee42a868d1433b8bbaf7f711005925" name="Dev Back" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true">
+                <task id="8" uid="7b79fc9d66ec4390b340ba411545db83" name="Développement des API pour la communication client-serveur" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true"/>
+                <task id="9" uid="f53265be6b6447a488e20e8fd1e78999" name="Gestion des utilisateurs, des vidéos et des interactions sociales" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true"/>
+                <task id="10" uid="bd3a5cbb5bb3468da4c5685a9405acd8" name="Choix et configuration du service cloud pour le stockage des vidéos" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true"/>
+                <task id="11" uid="3ee8bbf6432b45ffb413345db55dce10" name="Configuration de la base de données cloud pour les métadonnées et les interactions" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true"/>
+                <task id="12" uid="c76d72ce2dbb45c0978bf5efb891e245" name="Implémentation des mécanismes de sécurité des données et d'authentification" meeting="false" start="2024-05-16" duration="1" complete="0" expand="false"/>
+                <task id="21" uid="0c8413175bb046f78d8f3cf63b1cfae2" name="Point avec l'équipe" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true"/>
+                <task id="14" uid="f8063f26f6164b0a8598e718ae2b5abe" name="Test et Qualité" meeting="false" start="2024-05-16" duration="1" complete="0" expand="false">
+                    <task id="15" uid="01c00bd34bf144908dad716ef63467c9" name="Développement de scénarios de test et de cas d'utilisation" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true"/>
+                    <task id="16" uid="f4de0c476bb04697868334aa55a4db6c" name="Tests unitaires et d'intégration" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true"/>
+                    <task id="17" uid="e837c84a643e4d4ebc7edecf0b9102cb" name="Correction des bugs et des problèmes identifiés" meeting="false" start="2024-05-16" duration="1" complete="0" expand="true"/>
+                </task>
+            </task>
+        </task>
+        <task id="27" uid="20f125bf0e4946aa9602b4cab5c38cb3" name="Itération 3" meeting="false" start="2024-05-17" duration="1" complete="0" expand="true">
+            <task id="18" uid="1dd97ab839ec4d19bdc2aa2557850887" name="Déploiement" meeting="false" start="2024-05-17" duration="1" complete="0" expand="true">
+                <task id="22" uid="7b2e9afaff17419aa5f18d06ee7fb2be" name="Déploiement de l'application sur les plateformes cibles (iOS, Android)" meeting="false" start="2024-05-17" duration="1" complete="0" expand="true"/>
+                <task id="23" uid="69db692d5cdd40e3980a1ff19f7e9ed2" name="Suivi et gestion des mises à jour et des correctifs" meeting="false" start="2024-05-17" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="24" uid="b588e206fa5a406da30c05bd4c6ac8f3" name="Livraison et soutenance" meeting="true" start="2024-07-22" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

@@ -1,0 +1,28 @@
+Itération 1
+Visionnage d’une vidéo
+TU 
+TI
+TV
+Itération 2
+Liker la vidéo
+Commenter la vidéo
+Itération 3
+visionner plusieurs vidéos
+TU  
+TI
+TV
+Itération 4
+algorithme de recommandation
+TU  
+TI
+TV
+Itération 5
+sauvegarder une vidéo
+transférer une vidéo
+TU 
+TI
+TV
+Itération 6
+Déploiement 
+TV
+

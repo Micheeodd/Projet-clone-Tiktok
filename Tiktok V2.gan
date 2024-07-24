@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2024-07-01" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3309" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="200" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="75" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#990099 #ffff00 #0000ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="2" uid="4f8949fb91c94f2691e7c19c8ee6098c" name="Itération 1" color="#000000" meeting="false" start="2024-07-01" duration="8" complete="0" expand="false" cost-manual-value="0" cost-calculated="false">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <task id="3" uid="42df9dd8f0234b43ba14b27ef6cea142" name="Visionnage d’une vidéo" color="#8cb6ce" meeting="false" start="2024-07-01" duration="5" complete="0" expand="true" cost-manual-value="0" cost-calculated="false">
+                <depend id="4" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="4" uid="9c824eff81af4bed9169ff208fd7eae9" name="TU" color="#8cb6ce" meeting="false" start="2024-07-08" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="5" uid="20cdc6f9240f42c79c39275708e5436f" name="TI" color="#8cb6ce" meeting="false" start="2024-07-09" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false">
+                <depend id="6" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="6" uid="34043498800544c48743962ed2dda715" name="TV" color="#8cb6ce" meeting="false" start="2024-07-10" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+        </task>
+        <task id="7" uid="00e7a00b8a044f0689d5e704b8a8555f" name="Itération 2" color="#000000" meeting="false" start="2024-07-11" duration="1" complete="0" expand="false" cost-manual-value="0" cost-calculated="false">
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+            <task id="8" uid="a8d8dc36bbb64f53a2abce02302f83a0" name="Liker la vidéo" color="#8cb6ce" meeting="false" start="2024-07-11" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="9" uid="c8454899e0d747c4aef46cbc996cef7f" name="Commenter la vidéo" color="#8cb6ce" meeting="false" start="2024-07-11" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="11" uid="ed6f942c96e44cd5aa20b3241496a176" name="visionner plusieurs vidéos" color="#8cb6ce" meeting="false" start="2024-07-11" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="29" uid="2b49fad083fe49418f51f0e4e044ab1c" name="TU, TI et TV" color="#8cb6ce" meeting="false" start="2024-07-11" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+        </task>
+        <task id="10" uid="dd83812b8adc4ee189a719a7342eacce" name="Itération 3" color="#000000" meeting="false" start="2024-07-12" duration="1" complete="0" expand="false" cost-manual-value="0" cost-calculated="false">
+            <depend id="15" type="2" difference="0" hardness="Strong"/>
+            <task id="30" uid="3961a3b3b8a9471a94e15bd152d177ff" name="visionner plusieurs videos" color="#8cb6ce" meeting="false" start="2024-07-12" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="12" uid="43c137ba9e4d4f5fb9b2026029f71800" name="TU" color="#8cb6ce" meeting="false" start="2024-07-12" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="13" uid="835f49b300514779ae969faf4fb8ea27" name="TI" color="#8cb6ce" meeting="false" start="2024-07-12" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="14" uid="036a69e4532b46bd88bc7d445775bf88" name="TV" color="#8cb6ce" meeting="false" start="2024-07-12" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+        </task>
+        <task id="15" uid="e2bfefc9215b49ab9332e6f92107fe20" name="Itération 4" color="#000000" meeting="false" start="2024-07-15" duration="1" complete="0" expand="false" cost-manual-value="0" cost-calculated="false">
+            <depend id="20" type="2" difference="0" hardness="Strong"/>
+            <task id="16" uid="c1e91f63539c4fad8e3cfb767904c233" name="algorithme de recommandation" color="#8cb6ce" meeting="false" start="2024-07-15" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="17" uid="544d04b9ee9d488bbb88a6ac0830e305" name="TU" color="#8cb6ce" meeting="false" start="2024-07-15" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="18" uid="84d8f1e14f064dc78e81fd65ab667fc0" name="TI" color="#8cb6ce" meeting="false" start="2024-07-15" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="19" uid="14b3ce7e02de4985b654e4ac8a3b3242" name="TV" color="#8cb6ce" meeting="false" start="2024-07-15" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+        </task>
+        <task id="20" uid="4dbb85768c8f4e8c92a180ca1b4b16bc" name="Itération 5" color="#000000" meeting="false" start="2024-07-16" duration="1" complete="0" expand="false" cost-manual-value="0" cost-calculated="false">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+            <task id="21" uid="8e457df5557441e3a009afe6bd4ae5d9" name="sauvegarder une vidéo" color="#8cb6ce" meeting="false" start="2024-07-16" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="22" uid="389d01a324af46ff99f1b16d57b90e65" name="transférer une vidéo" color="#8cb6ce" meeting="false" start="2024-07-16" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="23" uid="d859d3cbfb3a4140a9c768b7aa6c6ce8" name="TU" color="#8cb6ce" meeting="false" start="2024-07-16" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="24" uid="30aa77fee0a14a2bb90d69e353a18e97" name="TI" color="#8cb6ce" meeting="false" start="2024-07-16" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="25" uid="fffd75fdc1024d8092ebea0f8f6082f3" name="TV" color="#8cb6ce" meeting="false" start="2024-07-16" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+        </task>
+        <task id="26" uid="3805e7ae28b74d7098c624fa12de3a19" name="Itération 6" color="#000000" meeting="false" start="2024-07-17" duration="1" complete="0" expand="false" cost-manual-value="0" cost-calculated="false">
+            <depend id="31" type="2" difference="0" hardness="Strong"/>
+            <task id="27" uid="7bd8dfba5c0f4deaa8ffac1ac9837fcd" name="Déploiement" color="#8cb6ce" meeting="false" start="2024-07-17" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+            <task id="28" uid="6bdcce4d019e42408f8ffe906e811c11" name="TV" color="#8cb6ce" meeting="false" start="2024-07-17" duration="1" complete="0" expand="true" cost-manual-value="0" cost-calculated="false"/>
+        </task>
+        <task id="31" uid="b7c396a0082143d28ddeb68b83348079" name="livraison et Soutenance" meeting="false" start="2024-07-18" duration="3" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
