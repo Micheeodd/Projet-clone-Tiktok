@@ -13,59 +13,63 @@ class VideoScreen extends StatelessWidget {
 
   final VideoController videoController = Get.put(VideoController());
 
-  buildProfile(String profilePhoto) {
+  Widget buildProfile(String profilePhoto) {
     return SizedBox(
       width: 60,
       height: 60,
-      child: Stack(children: [
-        Positioned(
-          left: 5,
-          child: Container(
-            width: 50,
-            height: 50,
-            padding: const EdgeInsets.all(1),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(25),
-              child: Image(
-                image: NetworkImage(profilePhoto),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-        )
-      ]),
-    );
-  }
-
-  buildMusicAlbum(String profilePhoto) {
-    return SizedBox(
-      width: 60,
-      height: 60,
-      child: Column(
+      child: Stack(
         children: [
-          Container(
-              padding: EdgeInsets.all(11),
-              height: 50,
+          Positioned(
+            left: 5,
+            child: Container(
               width: 50,
+              height: 50,
+              padding: const EdgeInsets.all(1),
               decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [
-                      Colors.grey,
-                      Colors.white,
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(25)),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(25),
+              ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(25),
                 child: Image(
                   image: NetworkImage(profilePhoto),
                   fit: BoxFit.cover,
                 ),
-              ))
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget buildMusicAlbum(String albumPhoto) {
+    return SizedBox(
+      width: 60,
+      height: 60,
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(11),
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [
+                  Colors.grey,
+                  Colors.white,
+                ],
+              ),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(25),
+              child: Image(
+                image: NetworkImage(albumPhoto),
+                fit: BoxFit.cover,
+              ),
+            ),
+          )
         ],
       ),
     );
@@ -181,7 +185,16 @@ class VideoScreen extends StatelessWidget {
                                 Column(
                                   children: [
                                     InkWell(
-                                      onTap: (){},
+                                      onTap: () {
+                                        // Naviguer vers l'écran des commentaires
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) => CommentScreen(
+                                              id: data.id,
+                                            ),
+                                          ),
+                                        );
+                                      },
                                       child: const Icon(
                                         Icons.comment,
                                         size: 40,

@@ -1,4 +1,3 @@
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
@@ -96,7 +95,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                   const SizedBox(height: 5),
                                   const Text(
-                                    'Following',
+                                    'Abonnements',
                                     style: TextStyle(
                                       fontSize: 14,
                                     ),
@@ -122,7 +121,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                   const SizedBox(height: 5),
                                   const Text(
-                                    'Followers',
+                                    'Abonnés',
                                     style: TextStyle(
                                       fontSize: 14,
                                     ),
@@ -148,7 +147,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                   const SizedBox(height: 5),
                                   const Text(
-                                    'Likes',
+                                    'J\'aime',
                                     style: TextStyle(
                                       fontSize: 14,
                                     ),
@@ -179,10 +178,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 },
                                 child: Text(
                                   widget.uid == authController.user.uid
-                                      ? 'Sign Out'
+                                      ? 'Déconnexion'
                                       : controller.user['isFollowing']
-                                      ? 'Unfollow'
-                                      : 'Follow',
+                                      ? 'Ne plus suivre'
+                                      : 'Suivre',
                                   style: const TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -194,7 +193,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           const SizedBox(
                             height: 25,
                           ),
-                          // video list
+                          // Liste des vidéos
                           GridView.builder(
                             shrinkWrap: true,
                             physics: const NeverScrollableScrollPhysics(),

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tiktok_tutorial/constants.dart';
@@ -73,7 +72,7 @@ class CommentScreen extends StatelessWidget {
                                 width: 10,
                               ),
                               Text(
-                                '${comment.likes.length} likes',
+                                '${comment.likes.length} j\'aime',
                                 style: const TextStyle(
                                   fontSize: 12,
                                   color: Colors.white,
@@ -106,7 +105,7 @@ class CommentScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                   decoration: const InputDecoration(
-                    labelText: 'Comment',
+                    labelText: 'Commentaire',
                     labelStyle: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
@@ -128,7 +127,7 @@ class CommentScreen extends StatelessWidget {
                   onPressed: () =>
                       commentController.postComment(_commentController.text),
                   child: const Text(
-                    'Send',
+                    'Envoyer',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,

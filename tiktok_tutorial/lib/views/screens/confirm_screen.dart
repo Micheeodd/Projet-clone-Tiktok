@@ -16,6 +16,7 @@ class ConfirmScreen extends StatefulWidget {
     required this.videoFile,
     required this.videoPath,
   }) : super(key: key);
+
   @override
   State<ConfirmScreen> createState() => _ConfirmScreenState();
 }
@@ -28,7 +29,6 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
   UploadVideoController uploadVideoController =
   Get.put(UploadVideoController());
 
-
   @override
   void initState() {
     super.initState();
@@ -40,6 +40,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
     controller.setVolume(1);
     controller.setLooping(true);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +68,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                     width: MediaQuery.of(context).size.width - 20,
                     child: TextInputField(
                       controller: _songController,
-                      labelText: 'Song Name',
+                      labelText: 'Nom de la chanson',
                       icon: Icons.music_note,
                     ),
                   ),
@@ -79,7 +80,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                     width: MediaQuery.of(context).size.width - 20,
                     child: TextInputField(
                       controller: _captionController,
-                      labelText: 'Caption',
+                      labelText: 'Légende',
                       icon: Icons.closed_caption,
                     ),
                   ),
@@ -92,7 +93,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                           _captionController.text,
                           widget.videoPath),
                       child: const Text(
-                        'Share!',
+                        'Partager!',
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,

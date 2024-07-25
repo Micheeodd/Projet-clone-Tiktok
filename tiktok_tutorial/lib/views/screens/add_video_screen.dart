@@ -26,57 +26,63 @@ class AddVideoScreen extends StatelessWidget {
   }
 
   showOptionsDialog(BuildContext context) {
-    return showDialog(context: context, builder: (context) => SimpleDialog(
-      children: [
-        SimpleDialogOption(
-          onPressed: () => pickVideo(ImageSource.gallery, context),
-          child: const Row(
-            children: [
+    return showDialog(
+      context: context,
+      builder: (context) => SimpleDialog(
+        children: [
+          SimpleDialogOption(
+            onPressed: () => pickVideo(ImageSource.gallery, context),
+            child: const Row(
+              children: [
                 Icon(Icons.image),
                 Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Gallery',
-                    style: TextStyle(fontSize: 20),)
+                    'Galerie',
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
-            ],
+              ],
+            ),
           ),
-        ),
-        SimpleDialogOption(
-          onPressed: () => pickVideo(ImageSource.camera, context),
-          child: const Row(
-            children: [
-              Icon(Icons.camera),
-              Padding(
+          SimpleDialogOption(
+            onPressed: () => pickVideo(ImageSource.camera, context),
+            child: const Row(
+              children: [
+                Icon(Icons.camera),
+                Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Camera',
-                    style: TextStyle(fontSize: 20),)
-              ),
-            ],
+                    'Appareil photo',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        SimpleDialogOption(
-          onPressed: () => Navigator.of(context).pop(),
-          child: const Row(
-            children: [
-              Icon(Icons.image),
-              Padding(
+          SimpleDialogOption(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Row(
+              children: [
+                Icon(Icons.cancel),
+                Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Cancel',
-                    style: TextStyle(fontSize: 20),)
-              ),
-            ],
+                    'Annuler',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+              ],
+            ),
           ),
-        )
-      ],
-    ),);
+        ],
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Center(
         child: InkWell(
           onTap: () => showOptionsDialog(context),
@@ -85,13 +91,12 @@ class AddVideoScreen extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(color: buttonColor),
             child: const Center(
-              child:
-              Text(
-                'Add Video',
+              child: Text(
+                'Ajouter une vidéo',
                 style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold
+                  fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -99,6 +104,5 @@ class AddVideoScreen extends StatelessWidget {
         ),
       ),
     );
-
   }
 }

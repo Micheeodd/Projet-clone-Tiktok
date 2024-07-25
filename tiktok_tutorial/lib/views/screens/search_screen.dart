@@ -18,7 +18,7 @@ class SearchScreen extends StatelessWidget {
           title: TextFormField(
             decoration: const InputDecoration(
               filled: false,
-              hintText: 'Search',
+              hintText: 'Rechercher',
               hintStyle: TextStyle(
                 fontSize: 18,
                 color: Colors.white,
@@ -30,7 +30,7 @@ class SearchScreen extends StatelessWidget {
         body: searchController.searchedUsers.isEmpty
             ? const Center(
           child: Text(
-            'Search for users!',
+            'Recherchez des utilisateurs !',
             style: TextStyle(
               fontSize: 25,
               color: Colors.white,

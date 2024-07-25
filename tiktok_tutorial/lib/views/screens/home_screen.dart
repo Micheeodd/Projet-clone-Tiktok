@@ -15,8 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
   int pageIdx = 0;
 
   @override
-  Widget build(BuildContext context ) {
-    return  Scaffold(
+  Widget build(BuildContext context) {
+    return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         onTap: (idx) {
           setState(() {
@@ -26,31 +26,30 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         backgroundColor: backgroundColor,
         selectedItemColor: Colors.red,
-        unselectedItemColor:  Colors.white,
+        unselectedItemColor: Colors.white,
         currentIndex: pageIdx,
         items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home, size: 30),
-              label: 'Home'
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.search, size: 30),
-                label: 'Search'
-            ),
-            BottomNavigationBarItem(
-                icon: CustomIcon(),
-                label: 'Home'
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.message, size: 30),
-                label: 'Messages'
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person, size: 30),
-                label: 'Profile'
-            ),
-
-          ],
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home, size: 30),
+            label: 'Accueil',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search, size: 30),
+            label: 'Recherche',
+          ),
+          BottomNavigationBarItem(
+            icon: CustomIcon(),
+            label: 'Ajouter',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message, size: 30),
+            label: 'Messages',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person, size: 30),
+            label: 'Profil',
+          ),
+        ],
       ),
       body: pages[pageIdx],
     );
